@@ -1,38 +1,144 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 .App {
-  text-align: center;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.whole{
+  position: absolute;
+  height: 1000vh;
+  width: 100%;
+  z-index: 1;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*------------------ HERO SECTION-----------------*/
+.hero{
+  position: fixed;
+  height: 100vh;
+  padding-top: 200px;
+  left: 44%;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 2;
+}
+#herovid{
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.headshot{
+  border-radius: 50%;
+  border: 2px white solid;
+  margin: 40px 0;
+  width: 200px;
+  height: 200px;
+}
+.hero h1{
+
+}
+.hero h2{
+
+}
+.network-icons{
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.change-color{
+  color: #3284ff;
+  transition: 0.4s ease-in-out;
+}
+/*------------------PROJECT SECTION-----------------*/
+.projects{
+  position: absolute;
+  display: flex;
+  color: #ffa97e;
+  height: 100vh;
+}
+.projects-text{
+  top: 0;
+  left: 0;
+  position: fixed;
+  font-size: 60px;
+  margin: 0 auto;
+}
+.projects-text::after{
+  position: absolute;
+  content: "********";
+  
+}
+.animate-text::after{
+  animation: animate-text ease-in-out 2s;
+  animation-fill-mode: forwards;
+}
+/*------------------SCROLL DIRECTIONS-----------------*/
+.scroll{
+  color: rgb(143, 143, 143);
+  position: fixed;
+  bottom: 0;
+  left: 47.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scroll h1{
+  font-size: 22px;
+}
+.carrot{
+  width: 40px;
+  height: 40px;
+  animation: bounce infinite ease-in-out 1s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes bounce {
+  0%{
+    transform: translateY(-8px);
   }
-  to {
-    transform: rotate(360deg);
+  50%{
+    transform: translateY(6px);
+  }
+  100%{
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes animate-text {
+  0%{
+    content: "********";
+  }
+  10%{
+    content: "U*******";
+  }
+  20%{
+    content: "PT******";
+  }
+  30%{
+    content: "PRF*****";
+  }
+  40%{
+    content: "PROW****";
+  }
+  50%{
+    content: "PROJA***";
+  }
+  60%{
+    content: "PROJEB**";
+  }
+  70%{
+    content: "PROJECU*";
+  }
+  80%{
+    content: "PROJECTL";
+  }
+  90%{
+    content: "PROJECTS";
+  }
+  100%{
+    content: "PROJECTS";
   }
 }
